@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/*": ["packages/*/src"],
+      "@workspace/button": ["packages/button/src"]
+    }
+  }
+}
