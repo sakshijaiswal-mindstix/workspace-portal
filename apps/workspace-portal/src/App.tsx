@@ -1,15 +1,9 @@
-import { useState } from 'react'
-import  { Button }  from '@workspace/button'
-import './App.css'
+import React from "react";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  return <RouterProvider router={router} />;
+};
 
-  return (
-    <>
-     Click me <Button label='Click' variant='primary'/>
-    </>
-  )
-}
-
-export default App
+export default App;

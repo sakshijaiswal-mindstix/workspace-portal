@@ -7,6 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@workspace/button": path.resolve(__dirname, "../../packages/button/src"),
+      "@workspace/ProductBox": path.resolve(__dirname, "../../packages/ProductBox/src"),
+      src: path.resolve(__dirname, "./src"),
     },
   },
 });

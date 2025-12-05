@@ -7,6 +7,9 @@
   "scripts": {
   "build": "tsc"
 },
+ "dependencies": {
+    "sass": "^1.94.2"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",

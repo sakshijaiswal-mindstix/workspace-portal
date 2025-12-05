@@ -1,0 +1,34 @@
+.navWrapper {
+  width: 100%;
+}
+
+.appBar {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // THIS MAKES LEFT & RIGHT SEPARATE
+  padding: 0 16px;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuButton {
+  margin-right: 4px;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+}

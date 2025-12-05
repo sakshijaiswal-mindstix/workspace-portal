@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
+    "jsx": "react",
+    "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "@workspace/*": ["packages/*/src"],
       "@workspace/button": ["packages/button/src"]
     }
-  }
+  },
+  "include": ["global.d.ts", "packages"]
 }
