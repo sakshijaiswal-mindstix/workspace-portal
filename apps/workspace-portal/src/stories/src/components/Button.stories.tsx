@@ -22,7 +22,6 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-// 👇 Single story where user selects variant from dropdown
 export const Playground: Story = {
   args: {
     label: "My Button",
