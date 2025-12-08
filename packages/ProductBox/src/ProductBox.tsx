@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, CardMedia, CardContent, Typography } from "@mui/material";
 import Button from "@workspace/button";
 import { ProductBoxProps } from "./types";
-import styles from './ProductBox.module.scss';
+import styles from "./ProductBox.module.scss";
 
-const ProductBox: React.FC<ProductBoxProps> = ({ image, title, price, onAddToCart }) => {
-
+const ProductBox: React.FC<ProductBoxProps> = ({
+  image,
+  title,
+  price,
+  onAddToCart,
+}) => {
   const handleAddtoCart = () => {
-    onAddToCart?.(); 
+    onAddToCart?.();
   };
 
   return (
@@ -19,12 +23,21 @@ const ProductBox: React.FC<ProductBoxProps> = ({ image, title, price, onAddToCar
         className={styles.image}
       />
 
-      <CardContent className={styles.content} sx={{ padding: 0 }}>
-        <Typography className={styles.title}>{title}</Typography>
-        <Typography className={styles.price}>₹{price}</Typography>
-        <Button label="Add to Cart" variant="primary" onClick={handleAddtoCart}/>
-      </CardContent>
+      <CardContent className={styles.content}>
+        <Typography component="h3" className={styles.title}>
+          {title}
+        </Typography>
 
+        <Typography component="p" className={styles.price}>
+          ₹{price}
+        </Typography>
+
+        <Button
+          label="Add to Cart"
+          variant="primary"
+          onClick={handleAddtoCart}
+        />
+      </CardContent>
     </Card>
   );
 };

@@ -15,7 +15,15 @@ const NavBar: React.FC<NavBarProps> = ({
 }) => {
   return (
     <Box className={styles.navWrapper}>
-      <AppBar position="static" elevation={0} className={styles.appBar}>
+      <AppBar
+        position="static"
+        elevation={0}
+        sx={{
+          backgroundColor: "#2e2f30",
+          color: "white",
+          padding: "10px",
+        }}
+      >
         <Toolbar className={styles.toolbar}>
           <div className={styles.leftSection}>
             <IconButton
@@ -31,6 +39,7 @@ const NavBar: React.FC<NavBarProps> = ({
               {title}
             </Typography>
           </div>
+
           <div className={styles.rightSection}>
             <ProfileMenu />
           </div>
