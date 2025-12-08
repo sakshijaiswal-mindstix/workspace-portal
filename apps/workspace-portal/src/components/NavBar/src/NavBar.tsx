@@ -10,7 +10,7 @@ import ProfileMenu from "src/components/ProfileMenu/ProfileMenu";
 import type { NavBarProps } from "./types";
 
 const NavBar: React.FC<NavBarProps> = ({
-  title = "Workspace",
+  title = "Workspace Portal",
   onMenuClick,
 }) => {
   return (

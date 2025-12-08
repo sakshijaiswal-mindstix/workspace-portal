@@ -125,13 +125,32 @@ importers:
         specifier: ^7.2.6
         version: 7.2.6(@types/node@24.10.1)(sass-embedded@1.93.3)(sass@1.94.2)
 
+  apps/workspace-portal/src/components/CheckoutForm:
+    dependencies:
+      '@mui/material':
+        specifier: ^7.3.6
+        version: 7.3.6(@emotion/react@11.14.0(@types/react@19.2.7)(react@19.2.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.7)(react@19.2.1))(@types/react@19.2.7)(react@19.2.1))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@mui/system':
+        specifier: ^7.3.6
+        version: 7.3.6(@emotion/react@11.14.0(@types/react@19.2.7)(react@19.2.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.7)(react@19.2.1))(@types/react@19.2.7)(react@19.2.1))(@types/react@19.2.7)(react@19.2.1)
+
+  packages/Modal:
+    dependencies:
+      '@mui/icons-material':
+        specifier: ^7.3.6
+        version: 7.3.6(@mui/material@7.3.6(@emotion/react@11.14.0(@types/react@19.2.7)(react@19.2.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.7)(react@19.2.1))(@types/react@19.2.7)(react@19.2.1))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(@types/react@19.2.7)(react@19.2.1)
+
   packages/ProductBox:
     dependencies:
       sass:
         specifier: ^1.94.2
         version: 1.94.2
 
-  packages/button: {}
+  packages/button:
+    dependencies:
+      sass:
+        specifier: ^1.94.2
+        version: 1.94.2
 
 packages:
 

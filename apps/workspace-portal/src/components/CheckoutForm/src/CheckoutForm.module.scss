@@ -1,0 +1,16 @@
+.formWrapper {
+  width: 100%;
+  height: 60vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fullRow {
+  width: 100%;
+}
+
+:global(.MuiFormControl-root) {
+  width: 100% !important;
+}

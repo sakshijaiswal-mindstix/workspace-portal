@@ -1,0 +1,13 @@
+.formModal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttonRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+
+}
