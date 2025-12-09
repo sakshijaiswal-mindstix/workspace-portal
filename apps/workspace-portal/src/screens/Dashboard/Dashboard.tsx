@@ -1,33 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import SearchAppBar from "../../components/NavBar/src/NavBar";
 import ProductBox from "@workspace/ProductBox";
 import { FormModal } from "src/components/FormModal/src/FormModal";
 
 import styles from "./Dashboard.module.scss";
-import { mockProducts } from "src/services/ProductData";
+import { useAppDispatch, useAppSelector } from "../../state/hooks";
+import { openModal, closeModal } from "../../state/slices/productSlice"
 
 const Homepage: React.FC = () => {
-  const [openModal, setOpenModal] = useState(false);
+  const dispatch = useAppDispatch();
 
-  const handleOpenModal = () => setOpenModal(true);
-  const handleCloseModal = () => setOpenModal(false);
+  const products = useAppSelector((state) => state.products.items);
+  const isOpen = useAppSelector((state) => state.products.isModalOpen);
 
   return (
     <div className={styles.homeWrapper}>
       <SearchAppBar />
 
       <div className={styles.content}>
-        {mockProducts.map((items) => (
+        {products.map((item) => (
           <ProductBox
-            key={items.id}
-            image={items.image}
-            title={items.title}
-            price={items.price}
-            onAddToCart={handleOpenModal}
+            key={item.id}
+            image={item.image}
+            title={item.title}
+            price={item.price}
+            onAddToCart={() => dispatch(openModal())}
           />
         ))}
       </div>
-      <FormModal isOpen={openModal} onClose={handleCloseModal} />
+
+      <FormModal isOpen={isOpen} onClose={() => dispatch(closeModal())} />
     </div>
   );
 };

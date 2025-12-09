@@ -8,11 +8,14 @@ import Box from "@mui/material/Box";
 import styles from "./NavBar.module.scss";
 import ProfileMenu from "src/components/ProfileMenu/ProfileMenu";
 import type { NavBarProps } from "./types";
+import { useTranslation } from "react-i18next";
 
 const NavBar: React.FC<NavBarProps> = ({
   title = "Workspace Portal",
   onMenuClick,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <Box className={styles.navWrapper}>
       <AppBar
@@ -36,7 +39,7 @@ const NavBar: React.FC<NavBarProps> = ({
             </IconButton>
 
             <Typography variant="h6" className={styles.title}>
-              {title}
+              {t("dashboard.title", title)}
             </Typography>
           </div>
 
