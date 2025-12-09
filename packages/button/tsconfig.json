@@ -1,18 +1,7 @@
 {
-  "compilerOptions": {
-    "outDir": "dist",
-    "declaration": true,
-    "emitDeclarationOnly": false,
-    "declarationDir": "dist",
-    "jsx": "react-jsx",
-    "module": "ESNext",
-    "target": "ESNext",
-    "moduleResolution": "bundler",
-    "skipLibCheck": true
-  },
   "extends": "../../tsconfig.json",
-  "include": [
-    "src",
-    "../../global.d.ts"
-  ]
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src"]
 }

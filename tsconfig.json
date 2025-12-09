@@ -1,12 +1,21 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "esModuleInterop": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM"],
+    "jsx": "react-jsx",
+
+    "moduleResolution": "bundler",
     "baseUrl": ".",
+
     "paths": {
-      "@workspace/*": ["packages/*/src"],
-      "@workspace/button": ["packages/button/src"]
-    }
+      "@workspace/*": ["packages/*/src"]
+    },
+
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "types": ["vitest/globals", "node"]
   },
   "include": ["global.d.ts", "packages"]
 }
