@@ -2,12 +2,13 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import styles from "./CheckoutForm.module.scss";
+import { CheckoutFormData } from "./src/types";
 //import { formatDateToDDMMYYYY } from "@workspace/shared-utils";
 
 
 export default function CheckoutForm() {
 
-  const [formData, setFormData] = React.useState({
+  const [formData, setFormData] = React.useState<CheckoutFormData>({
     fullName: "",
     mobileNumber: "",
     houseNo: "",

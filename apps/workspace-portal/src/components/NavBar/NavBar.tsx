@@ -22,6 +22,10 @@ const NavBar: React.FC<NavBarProps> = ({
     navigate('/settings')
   }
 
+  const handleLogoutClick = () => {
+    navigate('/')
+  }
+
   return (
     <Box className={styles.navWrapper}>
       <AppBar
@@ -50,7 +54,7 @@ const NavBar: React.FC<NavBarProps> = ({
           </div>
 
           <div className={styles.rightSection}>
-            <ProfileMenu onSettingClick={handleSettingsClick}/>
+            <ProfileMenu onSettingClick={handleSettingsClick} onLogoutClick={handleLogoutClick}/>
           </div>
         </Toolbar>
       </AppBar>

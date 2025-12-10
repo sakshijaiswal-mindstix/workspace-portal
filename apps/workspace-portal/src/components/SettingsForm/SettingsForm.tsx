@@ -13,21 +13,18 @@ import { useSettings } from "src/state/contexts/SettingsContext";
 import type {
   SettingsFormRef,
   ThemeType
-} from "./types.ts";
+} from "./types.js";
 
 const SettingsForm = forwardRef<SettingsFormRef>((_, ref) => {
-  const { theme, language, notifications, updateSettings } = useSettings();
+  const { theme, language, updateSettings } = useSettings();
 
   const [localTheme, setLocalTheme] = useState<ThemeType>(theme);
   const [localLanguage, setLocalLanguage] = useState<string>(language);
-  const [localNotifications, setLocalNotifications] =
-    useState<boolean>(notifications);
 
   const handleSave = () => {
     updateSettings({
       theme: localTheme,
       language: localLanguage,
-      notifications: localNotifications
     });
     alert("Settings saved");
   };
@@ -50,16 +47,6 @@ const SettingsForm = forwardRef<SettingsFormRef>((_, ref) => {
         onChange={(e) =>
           setLocalTheme(e.target.value as ThemeType)
         }
-      />
-
-      <FormControlLabel
-        control={
-          <Switch
-            checked={localNotifications}
-            onChange={(e) => setLocalNotifications(e.target.checked)}
-          />
-        }
-        label="Enable Notifications"
       />
     </Box>
   );

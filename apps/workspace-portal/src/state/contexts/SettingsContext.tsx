@@ -10,7 +10,6 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [settings, setSettings] = useState<SettingsState>({
     theme: "light",
     language: "en",
-    notifications: true
   });
 
   const updateSettings = (data: Partial<SettingsState>) => {

@@ -1,8 +1,7 @@
 import React from "react";
-import SearchAppBar from "../../components/NavBar/src/NavBar";
+import SearchAppBar from "../../components/NavBar/NavBar";
 import ProductBox from "@workspace/ProductBox";
-import { FormModal } from "src/components/FormModal/src/FormModal";
-
+import { FormModal } from "src/components/FormModal/FormModal";
 import styles from "./Dashboard.module.scss";
 import { useAppDispatch, useAppSelector } from "../../state/hooks";
 import { openModal, closeModal } from "../../state/slices/productSlice"

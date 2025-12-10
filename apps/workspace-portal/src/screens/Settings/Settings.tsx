@@ -1,15 +1,21 @@
 import React, { useRef } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-
-import SettingsForm from "src/components/SettingsForm/src/SettingsForm";
+import Button from "@workspace/Button"
+import SettingsForm from "src/components/SettingsForm/SettingsForm";
 import type { SettingsFormRef } from "./types";
 import withSettings from "src/hoc/withSettings";
-import type { SettingsContextType } from "src/components/SettingsForm/src/types";
+import type { SettingsContextType } from "src/components/SettingsForm/types";
+import { useNavigate } from "react-router-dom";
 
 const SettingsPage: React.FC<SettingsContextType> = ({ theme }) => {
+  const navigate = useNavigate()
   const formRef = useRef<SettingsFormRef>(null);
+
+  const handleSave = () => {
+    formRef.current?.save();
+    navigate('/')
+  }
 
   return (
     <Box p={4}>
@@ -23,13 +29,13 @@ const SettingsPage: React.FC<SettingsContextType> = ({ theme }) => {
 
       <SettingsForm ref={formRef} />
 
-      <Button
-        sx={{ mt: 2 }}
-        variant="outlined"
-        onClick={() => formRef.current?.save()}
-      >
-        Save From Parent
-      </Button>
+      <Box mt={5}>
+        <Button
+        variant="secondary"
+        onClick={handleSave}
+        label="Save Settings"
+      />
+      </Box>
     </Box>
   );
 };
