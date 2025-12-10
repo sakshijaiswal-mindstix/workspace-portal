@@ -9,12 +9,18 @@ import styles from "./NavBar.module.scss";
 import ProfileMenu from "src/components/ProfileMenu/ProfileMenu";
 import type { NavBarProps } from "./types";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const NavBar: React.FC<NavBarProps> = ({
   title = "Workspace Portal",
   onMenuClick,
 }) => {
+  const navigate = useNavigate()
   const { t } = useTranslation();
+
+  const handleSettingsClick = () => {
+    navigate('/settings')
+  }
 
   return (
     <Box className={styles.navWrapper}>
@@ -44,7 +50,7 @@ const NavBar: React.FC<NavBarProps> = ({
           </div>
 
           <div className={styles.rightSection}>
-            <ProfileMenu />
+            <ProfileMenu onSettingClick={handleSettingsClick}/>
           </div>
         </Toolbar>
       </AppBar>

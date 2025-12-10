@@ -1,6 +1,6 @@
 export interface ProfileMenuProps {
   username?: string;
   avatarLetter?: string;
-  onProfileClick?: () => void;
+  onSettingClick?: () => void;
   onLogoutClick?: () => void;
 }

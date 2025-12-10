@@ -10,7 +10,7 @@ import type { ProfileMenuProps } from "./types";
 const ProfileMenu: React.FC<ProfileMenuProps> = ({
   username = "User",
   avatarLetter = "U",
-  onProfileClick,
+  onSettingClick,
   onLogoutClick,
 }) => {
 
@@ -38,11 +38,11 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({
       >
         <MenuItem
           onClick={() => {
-            onProfileClick?.();
+            onSettingClick?.();
             handleClose();
           }}
         >
-          Profile
+          Settings
         </MenuItem>
 
         <Divider />
