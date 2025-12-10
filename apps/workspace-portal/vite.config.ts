@@ -6,10 +6,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@workspace/button": path.resolve(__dirname, "../../packages/button/src"),
-      "@workspace/ProductBox": path.resolve(__dirname, "../../packages/ProductBox/src"),
-      "@workspace/Modal": path.resolve(__dirname, "../../packages/Modal/src"),
       src: path.resolve(__dirname, "./src"),
+      "@workspace": path.resolve(__dirname, "../../packages"),
     },
   },
 });

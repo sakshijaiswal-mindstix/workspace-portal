@@ -7,6 +7,7 @@ export default defineConfig({
     react(),
     tsconfigPaths()
   ],
+  
   test: {
     environment: "jsdom",
     globals: true,

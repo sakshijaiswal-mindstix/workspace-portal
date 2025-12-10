@@ -1,21 +1,10 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ESNext",
-    "lib": ["ES2022", "DOM"],
-    "jsx": "react-jsx",
-
-    "moduleResolution": "bundler",
     "baseUrl": ".",
-
     "paths": {
       "@workspace/*": ["packages/*/src"]
-    },
-
-    "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "types": ["vitest/globals", "node"]
+    }
   },
-  "include": ["global.d.ts", "packages"]
+  "include": ["packages"]
 }
