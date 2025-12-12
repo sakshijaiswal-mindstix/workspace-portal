@@ -10,9 +10,4 @@ describe("Dashboard Page", () => {
   it("should render product cards", () => {
     cy.get("img").its("length").should("be.greaterThan", 0);
   });
-
-//   it("should open modal when Add to Cart clicked", () => {
-//     cy.get("button").first().click();
-//     cy.get('[role="presentation"], .MuiModal-root').should("be.visible");
-//   });
 });
