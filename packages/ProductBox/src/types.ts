@@ -1,5 +1,5 @@
 export interface ProductBoxProps {
-  image: string;
+  readonly image: string;
   title: string;
   price: string | number;
   onAddToCart: () => void;

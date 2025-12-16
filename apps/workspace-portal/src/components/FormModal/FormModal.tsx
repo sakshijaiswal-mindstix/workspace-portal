@@ -1,7 +1,7 @@
 import { Modal } from "@mui/material";
 import React from "react";
 import  WorkSpaceModal  from "@workspace/Modal";
-import type { FormModalProps } from "./types";
+import { FormModalProps } from "./types";
 import CheckoutForm from "src/components/CheckoutForm/CheckoutForm";
 import Button from "@workspace/button";
 import styles from './FormModal.module.scss'

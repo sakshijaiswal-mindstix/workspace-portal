@@ -3,6 +3,7 @@ import type {
   SettingsContextType,
   SettingsState
 } from "./types.ts";
+import i18n from "src/i18n.js";
 
 const SettingsContext = createContext<SettingsContextType | null>(null);
 
@@ -13,7 +14,15 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   });
 
   const updateSettings = (data: Partial<SettingsState>) => {
-    setSettings((prev) => ({ ...prev, ...data }));
+    setSettings((prev) => {
+      const updated = { ...prev, ...data };
+      if (data.language && data.language !== prev.language) {
+        i18n.changeLanguage(data.language);
+        localStorage.setItem("language", data.language);
+      }
+
+      return updated;
+    });
   };
 
   return (

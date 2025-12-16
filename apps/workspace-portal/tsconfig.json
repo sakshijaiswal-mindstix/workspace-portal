@@ -9,5 +9,5 @@
     "jsx": "react-jsx",
     "types": ["vite/client","cypress"]
   },
-  "include": ["src"]
+  "include": ["src", "src/test"]
 }

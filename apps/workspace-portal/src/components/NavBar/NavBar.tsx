@@ -44,10 +44,10 @@ const NavBar: React.FC<NavBarProps> = ({
               color="inherit"
               className={styles.menuButton}
               onClick={onMenuClick}
+              aria-label="open menu"
             >
               <MenuIcon />
             </IconButton>
-
             <Typography variant="h6" className={styles.title}>
               {t("dashboard.title", title)}
             </Typography>
