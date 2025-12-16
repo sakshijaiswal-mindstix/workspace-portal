@@ -1,6 +1,6 @@
 type ProductData = {
     id: number,
-    image?: string,
+    image: string,
     title: string,
     price: number,
 }

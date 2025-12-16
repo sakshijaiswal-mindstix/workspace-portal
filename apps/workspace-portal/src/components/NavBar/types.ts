@@ -1,4 +1,4 @@
 export interface NavBarProps {
-  title?: string;
+  title: string;
   onMenuClick?: () => void;
 }

@@ -8,7 +8,7 @@ import styles from "./Profile.module.scss";
 import type { ProfileMenuProps } from "./types";
 
 const ProfileMenu: React.FC<ProfileMenuProps> = ({
-  username = "User",
+ // username = "User",
   avatarLetter = "U",
   onSettingClick,
   onLogoutClick,
